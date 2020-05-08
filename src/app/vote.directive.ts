@@ -5,15 +5,5 @@ import { Directive } from '@angular/core';
 })
 export class VoteDirective {
 
-  constructor(
-    public description:string,
-    public name:string,
-    public completeDate:Date, 
-    public vote:any,
-    public downvote:any
-) {
-  this.vote=0;
-  this.downvote=0;
+  constructor(){}
  }
-
-}
