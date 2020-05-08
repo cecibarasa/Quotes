@@ -3,11 +3,11 @@
 </p>
 <div class="row" ng-app="quote">
     <div class="col-md-2" ng-controller="click">
-        <button ng-click="vote = vote + 1"> {{quote.vote}} likes</button>
+        {{quote.vote}} likes
     </div>
-    <div class="col-md-2" ng-controller="click">
-        <button ng-click="vote = vote + 1"> {{quote.downvote}} dislikes</button>
+    <div class="col-md-3" ng-controller="click">
+        {{quote.downvote}} dislikes
     </div>
 </div>
 <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
-<app-votes></app-votes>
+<app-votes (quoteVote)="($event)"></app-votes>

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Quote } from "../quote";
 
@@ -9,10 +10,10 @@ import { Quote } from "../quote";
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote(1, 'Watch finding Nemo', 'Sleeep', new Date(2020,4,2), +5, 5),
-    new Quote(2,'Buy Cookies', 'Eat', new Date(2020,1,1), +10, 5),
-    new Quote(3, 'Get new Phone Case', 'IDK', new Date(2020,2,2), +5, 0),
-    new Quote(4, 'Get Dog Food', 'For Jazz', new Date(2020,5,1), 0, 0),
+    new Quote(1, 'Watch finding Nemo', 'Sleeep', new Date(2020,4,2)),
+    new Quote(2,'Buy Cookies', 'Eat', new Date(2020,1,1)),
+    new Quote(3, 'Get new Phone Case', 'IDK', new Date(2020,2,2)),
+    new Quote(4, 'Get Dog Food', 'For Jazz', new Date(2020,5,1)),
   ];
   
 
@@ -47,6 +48,16 @@ export class QuoteComponent implements OnInit {
     
   }
   
+  votes:number=0;
+    vote(){
+      this.votes=this.votes+1;
+
+    }
+    downvotes:number=0;
+    downvote(){
+      this.downvotes=this.downvotes+1;
+
+    }
 
   constructor() { }
 

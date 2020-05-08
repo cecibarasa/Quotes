@@ -12,20 +12,17 @@ export class VotesComponent implements OnInit {
   @Input() quote: Quote;
   @Output() votes = new EventEmitter();
 
-  newVote = function (votes) {
-    votes.vote = function (index) {
-      votes.quote[index].like += 1;
-    }
-    votes.downvote = function (index) {
-      votes.quote[index].dislike += 1;
-    }
-  }
+  //newVote = function (votes) {
+    //votes.vote = function (index) {
+    //  votes.quote[index].like += 1;
+    //}
+    //votes.downvote = function (index) {
+      //votes.quote[index].dislike += 1;
+    //}
+  //}
   
-  ngOnInit(): void {
-    var quoteVote = this.quote.vote('quote', []);
-    this.quote.vote('click', function($scope) {
-    $scope.vote = 0;
-});
+  ngOnInit() {
+    
   }
 
 }
