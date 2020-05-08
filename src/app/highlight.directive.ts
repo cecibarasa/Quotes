@@ -12,8 +12,8 @@ export class HighlightDirective {
     this.textDeco('highlight')
   }
 
-  private textDeco(highlightColor) {
-    this.elem.nativeElement.style.background = highlightColor
+  private textDeco(color:string) {
+    this.elem.nativeElement.style.background = this.highlightColor;
     
   }
 
