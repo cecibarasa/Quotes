@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Quote } from "../quote";
 
 @Component({
   selector: 'app-votes',
@@ -8,8 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class VotesComponent implements OnInit {
 
   constructor() { }
+  @Input() quote: Quote;
+  @Output() votes = new EventEmitter();
 
+  newVote = function (votes) {
+    votes.vote = function (index) {
+      votes.quote[index].like += 1;
+    }
+    votes.downvote = function (index) {
+      votes.quote[index].dislike += 1;
+    }
+  }
+  
   ngOnInit(): void {
+    var quoteVote = this.quote.vote('quote', []);
+    this.quote.vote('click', function($scope) {
+    $scope.vote = 0;
+});
   }
 
 }

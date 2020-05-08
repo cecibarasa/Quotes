@@ -1,10 +1,13 @@
 <p appHighlight highlightColor="#cccc00">
     {{quote.description}} since {{quote.completeDate|dateCount}} days ago.
 </p>
-<button class="likes" ng-click="likes($index)">Like</button>
-
-<button class="dislikes" ng-click="dislikes($index)">Dislike</button>
-<br>
-<br>
-
+<div class="row" ng-app="quote">
+    <div class="col-md-2" ng-controller="click">
+        <button ng-click="vote = vote + 1"> {{quote.vote}} likes</button>
+    </div>
+    <div class="col-md-2" ng-controller="click">
+        <button ng-click="vote = vote + 1"> {{quote.downvote}} dislikes</button>
+    </div>
+</div>
 <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<app-votes></app-votes>

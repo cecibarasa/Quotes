@@ -9,15 +9,17 @@ import { Quote } from "../quote";
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote(1, 'Watch finding Nemo', 'Sleeep', new Date(2020,4,2), +5, -5),
-    new Quote(2,'Buy Cookies', 'Eat', new Date(2020,1,1), +10, -5),
+    new Quote(1, 'Watch finding Nemo', 'Sleeep', new Date(2020,4,2), +5, 5),
+    new Quote(2,'Buy Cookies', 'Eat', new Date(2020,1,1), +10, 5),
     new Quote(3, 'Get new Phone Case', 'IDK', new Date(2020,2,2), +5, 0),
     new Quote(4, 'Get Dog Food', 'For Jazz', new Date(2020,5,1), 0, 0),
   ];
+  
 
   toggleDetails(index){
-    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;  
   }
+
 
   //completeQuote(isComplete, index){
     //if (isComplete) {
@@ -44,18 +46,7 @@ export class QuoteComponent implements OnInit {
     this.quotes.unshift(quote)
     
   }
-  like(like,index){
-    if(like){
-      this.quotes[index].vote= this.quotes[index].vote +=1
-      
-      }
-    }
-    dislike(dislike,index){
-      if(dislike){
-        this.quotes[index].downvote= this.quotes[index].downvote -=1
-
-      }
-    }
+  
 
   constructor() { }
 
