@@ -2,34 +2,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <div class="container-fluid">
-    <h2 class="text-center; text-white">Create a new Quote</h2>
-    <hr>
+    <h2 style="text-align: center;">Create a new Quote</h2>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray" noshade="shade">
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="form">
         <div class="form-group">
 
-            <label for="description" class="fas fa-pen-fancy">Quote</label>
+            <label for="description" class="fas fa-pen-fancy description">Quote</label>
             <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
             <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                <p>Quote is required</p>
+                <p class="fas fa-times">Quote is required</p>
             </div>
         </div>
         <div class="form-group">
 
-            <label for="name" class="fas fa-user">Author</label>
+            <label for="name" class="fas fa-user name">Author</label>
             <input type="text" value="name" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                <p>Name is required</p>
+                <p class="fas fa-times">Name is required</p>
             </div>
         </div>
         <div class="form-group">
 
-            <label for="complete" class="far fa-calendar"></label>
-            <input type='date' value="date" id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
+            <label for="date" aria-placeholder="Enter date" class="far fa-calendar"></label>
+            <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
             <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-                <p>Date is required</p>
+                <p class="fas fa-times">Date is required</p>
             </div>
         </div>
+        <div class="form-group">
 
-        <button type="submit" class="btn btn-success || submitQuote.pristine" mat-fab aria-label="submit">Add Quote</button>
+            <label for="name" class="fas fa-user-check">Anonymous</label>
+            <input type="text" value="name" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p class="fas fa-times">Name is required</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success || submitQuote.pristine far fa-hand-point-right">Add Quote</button>
     </form>
 </div>

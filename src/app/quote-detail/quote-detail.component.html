@@ -2,8 +2,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <div class="card-body">
-    <p appHighlight highlightColor="#cccc00" class="fas fa-hourglass-half">
+    <p appHighlight highlightColor="#cccc00">
         ~{{quote.name}} since {{quote.completeDate|dateCount}} days ago.
     </p>
-    <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+    <button (click)='quoteDelete(true)' class="btn btn-danger fas fa-user-slash">Delete Quote</button>
 </div>

@@ -1,5 +1,11 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
-<button class="fas fa-thumbs-up btn btn-info" (click)='vote()' id="upvote">{{votes}}</button>
-<button class="fas fa-thumbs-down btn btn-info" (click)='downvote()' id="downvote">{{downvotes}}</button>
+<div class="row">
+    <div class="col-md-4">
+        <button class="fas fa-thumbs-up btn btn-info" (click)='vote()' id="upvote">{{votes}}</button>
+    </div>
+    <div class="col-md-4">
+        <button class="fas fa-thumbs-down btn btn-info" (click)='downvote()' id="downvote">{{downvotes}}</button>
+    </div>
+</div>

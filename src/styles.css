@@ -2,67 +2,94 @@
 
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-.jumbotron {
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kalam:wght@300&family=Pacifico&display=swap');
+.container {
     background-attachment: fixed;
-    background-image: url("https://images.unsplash.com/photo-1551449896-66e638cbda3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+    background-image: url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.container {
-    color: #26261a;
-    padding: 0;
-    margin: 0;
+    color: rgb(253, 252, 252);
     font-weight: normal;
+    box-sizing: content-box;
 }
 
 .card {
     border-style: solid;
-    border-color: #a0a09c;
+    border-color: rgb(95, 95, 95);
+    border-width: 10px;
     text-align: center;
-    padding: 100px;
     background-color: transparent;
 }
 
 .card-title {
-    color: rgb(37, 37, 37);
-    font-family: 'Dancing Script', cursive;
+    color: rgb(250, 248, 248);
+    font-family: 'Kalam', cursive;
     font-size: 50px;
 }
 
 .card-body {
-    color: rgb(37, 37, 37);
-    font-family: 'Dancing Script', cursive;
+    color: rgb(255, 254, 254);
+    font-family: 'Kalam', cursive;
     font-size: 50px;
 }
 
-.form {
+.container-fluid {
+    text-align: center;
     background-color: transparent;
-    width: 900px;
-    height: 700px;
     color: whitesmoke;
+    padding-left: 100px;
+    padding-top: 200px;
+}
+
+.container-fluid h2 {
+    font-size: 50px;
+    color: rgb(240, 245, 244);
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form {
+    width: 900px;
+    font-size: 50px;
+    font-family: 'Kalam', cursive;
 }
 
 #description {
     background-color: transparent;
-    color: rgb(37, 37, 37);
+    color: rgb(240, 245, 244);
+    font-family: 'Kalam', cursive;
+}
+
+.description {
+    font-family: 'Kalam', cursive;
+}
+
+.name {
+    font-family: 'Kalam', cursive;
 }
 
 #name {
     background-color: transparent;
-    color: rgb(37, 37, 37);
-}
-
-body {
-    font-family: Roboto, Arial, sans-serif;
-    margin: 0;
+    color: rgb(240, 245, 244);
+    font-family: 'Kalam', cursive;
 }
 
 #upvote {
-    size: 15px;
+    font-size: 50px;
+    background-color: transparent;
+    color: rgb(8, 216, 253);
+    border-style: none;
 }
 
 #downvote {
-    size: 15px;
+    font-size: 50px;
+    background-color: transparent;
+    color: rgb(10, 230, 238);
+    border-style: none;
+}
+
+#complete {
+    background-color: transparent;
 }

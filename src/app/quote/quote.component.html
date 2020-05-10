@@ -1,34 +1,32 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<div class="jumbotron">
-    <div class="container" id="container">
-        <div class="card">
-            <div class="card-text-center">
-                <div class="card-header">
-                    <h1>Quotes of The Century</h1>
+<div class="container" id="container">
+    <div class="card">
+        <div class="card-text-center">
+            <div class="card-header">
+                <h1>Quotes of The Century</h1>
+            </div>
+            <div *ngFor='let quote of quotes;let i = index' class="card-body">
+                <div class="card-text fas fa-quote-right">
+                    <p id={{i}} class="card-title">{{quote.description}} ~ {{quote.completeDate|date}}</p>
+                    <button (click)='toggleDetails(i)' class="btn btn-info fas fa-user-edit">View Author</button>
                 </div>
-                <div *ngFor='let quote of quotes;let i = index' class="card-body">
-                    <div class="card-text fas fa-quote-right">
-                        <p id={{i}} class="card-title">{{quote.description}} ~ {{quote.completeDate|date}}</p>
-                        <button (click)='toggleDetails(i)' class="btn btn-info fas fa-user-edit">View Author</button>
-                        <hr style="height:2px;border-width:0;color:gray;background-color:gray" noshade="shade">
-                    </div>
 
-                    <div class="card-text" *ngIf='quote.showDescription'>
-                        <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <app-ng-vote></app-ng-vote>
-                        </div>
+                <div class="card-text" *ngIf='quote.showDescription'>
+                    <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <app-ng-vote></app-ng-vote>
                     </div>
                 </div>
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray" noshade="shade">
             </div>
         </div>
-        <div class="col-md-6">
-            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+    <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
-        </div>
     </div>
 </div>
