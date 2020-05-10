@@ -9,7 +9,7 @@
                     <div class="card-text">
                         <p id={{i}} class="card-title">"{{quote.description}}" ~ {{quote.completeDate|date}}</p>
                         <button (click)='toggleDetails(i)' class="btn btn-info">View Quote</button>
-                        <hr>
+                        <hr style="height:2px;border-width:0;color:gray;background-color:gray" noshade="shade">
                     </div>
 
                     <div class="card-text" *ngIf='quote.showDescription'>

@@ -11,6 +11,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighlightDirective } from './highlight.directive';
 import { VotesComponent } from './votes/votes.component';
 import { NgVoteComponent } from './ng-vote/ng-vote.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,13 @@ import { NgVoteComponent } from './ng-vote/ng-vote.component';
     QuoteFormComponent,
     HighlightDirective,
     VotesComponent,
-    NgVoteComponent
+    NgVoteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
