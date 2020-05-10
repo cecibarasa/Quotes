@@ -51,7 +51,7 @@ export class QuoteComponent implements OnInit {
     if (addNewQuote) {
       let toReset = this.quotes;
     } else {
-      this.quotes.splice(index)
+      this.quotes.splice(index);
     }
   }
 
