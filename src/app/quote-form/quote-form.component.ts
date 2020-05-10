@@ -16,7 +16,8 @@ newQuote = new Quote(0,"","",new Date());
     this.addQuote.emit(this.newQuote);
   }
 
-  constructor() { }
+  constructor(formReset, newQuote) { }
+  
 
   ngOnInit() {
     
