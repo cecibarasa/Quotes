@@ -53,27 +53,16 @@
 .form {
     width: 900px;
     font-size: 50px;
-    font-family: 'Kalam', cursive;
 }
 
 #description {
     background-color: transparent;
-    color: rgb(240, 245, 244);
-    font-family: 'Kalam', cursive;
-}
-
-.description {
-    font-family: 'Kalam', cursive;
-}
-
-.name {
-    font-family: 'Kalam', cursive;
+    color: rgb(10, 10, 10);
 }
 
 #name {
     background-color: transparent;
-    color: rgb(240, 245, 244);
-    font-family: 'Kalam', cursive;
+    color: rgb(10, 10, 10);
 }
 
 #upvote {

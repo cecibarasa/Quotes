@@ -43,8 +43,16 @@ export class QuoteComponent implements OnInit {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
     quote.completeDate = new Date(quote.completeDate);
-    this.quotes.unshift(quote)
+    this.quotes.push(quote)
     
+  }
+
+  resetQuote(addNewQuote, index){
+    if (addNewQuote) {
+      let toReset = this.quotes;
+    } else {
+      this.quotes.splice(index)
+    }
   }
 
   votes:number = 0;
@@ -63,7 +71,7 @@ export class QuoteComponent implements OnInit {
     
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 //   votes:number = 0;
