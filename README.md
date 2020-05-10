@@ -19,6 +19,6 @@ A project that shows an Authors Quotes and how long the quotes have been publish
 * `BOOSTRAP`
 * `JAVASCRIPT`
 * `ANGULAR-CLI`
-
+## [License](https://github.com/cecibarasa/Quotes/blob/master/license.md)
 
 ## [Support and contact details](https://www.linkedin.com/in/cecilia-barasa-4a8311195/)
