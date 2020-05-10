@@ -1,1 +1,35 @@
+<form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="form">
+    <p>
+        <mat-form-field appearance="legacy" (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="form">
+            <mat-label for="description">Quote></mat-label>
+            <input matInput placeholder="Placeholder" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required>
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                <p>Quote is required</p>
+            </div>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label for="name">Author</mat-label>
+            <input matInput placeholder="Placeholder" type="text" value="name" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Name is required</p>
+            </div>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label for="complete">Date</mat-label>
+            <input matInput placeholder="Placeholder" type='date' value="date" id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
+            <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                <p>Date is required</p>
+            </div>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
 
+    </p>
+    <button type="submit" class="btn btn-success || submitQuote.pristine">Add Quote</button>
+</form>

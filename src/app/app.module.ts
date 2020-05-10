@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighlightDirective } from './highlight.directive';
 import { VotesComponent } from './votes/votes.component';
 import { NgVoteComponent } from './ng-vote/ng-vote.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldComponent } from './mat-form-field/mat-form-field.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HighlightDirective,
     VotesComponent,
     NgVoteComponent,
+    MatFormFieldComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    BrowserAnimationsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
