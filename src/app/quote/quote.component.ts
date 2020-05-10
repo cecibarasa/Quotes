@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Quote } from "../quote";
-import { NgForm } from '@angular/forms';
+import { NgVoteModule } from 'ng-vote';
 
 @Component({
   selector: 'app-quote',
@@ -13,8 +13,8 @@ export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
     new Quote(1, 'Put your mind, and soul into even your smallest acts.This is the secret to success', 'Swami Sivananda', new Date(2020,5,2)),
     new Quote(2,'The key to success is to start before you are ready', 'Marie Forleo', new Date(2020,5,5)),
-    new Quote(3, 'Get new Phone Case', 'IDK', new Date(2020,5,2)),
-    new Quote(4, 'Get Dog Food', 'For Jazz', new Date(2020,5,1)),
+    new Quote(3, 'I am selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you cannot handle me at my worst, then you sure as hell do not deserve me at my best.', 'Marilyn Monrore', new Date(2020,5,2)),
+    new Quote(4, 'Another one, no. Another two, drop two singles at a time.', 'DJ Khaled', new Date(2020,5,1)),
   ];
   
 
@@ -47,15 +47,16 @@ export class QuoteComponent implements OnInit {
     
   }
 
-    // vote(){
-    //   this.votes=this.votes + 1;
+  votes:number = 0;
+    vote(){
+      this.votes=this.votes + 1;
 
-    // }
-    // downvotes:number = 0;
-    // downvote(){
-    //   this.downvotes=this.downvotes + 1;
+    }
+    downvotes:number = 0;
+    downvote(){
+      this.downvotes=this.downvotes + 1;
 
-    // }
+    }
     
 
   constructor() { 
@@ -65,15 +66,15 @@ export class QuoteComponent implements OnInit {
   ngOnInit() {
   }
 
-  votes:number = 0;
-  downvotes:number = 0;
-Votes =  function(vote, downvote){
-  vote(function(){
-    this.votes=this.votes + 1;
-  })
-  downvote(function(){
-    this.downvotes=this.downvotes + 1;
-  })
+//   votes:number = 0;
+//   downvotes:number = 0;
+// Votes =  function(vote, downvote){
+//   vote(function(){
+//     this.votes=this.votes + 1;
+//   })
+//   downvote(function(){
+//     this.downvotes=this.downvotes + 1;
+//   })
     
-}
+// }
 }
