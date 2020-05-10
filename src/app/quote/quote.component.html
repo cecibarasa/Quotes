@@ -1,23 +1,32 @@
-<div class="container">
-    <h1>Quotes of The Century</h1>
-    <hr>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div *ngFor='let quote of quotes;let i = index'>
-                <div appVote>
-                    <h4 id={{i}}>{{quote.name}} on {{quote.completeDate|date}}</h4>
-                    <button (click)='toggleDetails(i)' class="btn btn-info">View Quote</button>
+<div class="jumbotron">
+    <div class="container" id="container">
+        <div class="card">
+            <div class="card-text-center">
+                <div class="card-header">
+                    <h1>Quotes of The Century</h1>
                 </div>
+                <div *ngFor='let quote of quotes;let i = index' class="card-body">
+                    <div class="card-text">
+                        <p id={{i}} class="card-title">"{{quote.description}}" on {{quote.completeDate|date}}</p>
+                        <button (click)='toggleDetails(i)' class="btn btn-info">View Quote</button>
+                        <hr>
+                    </div>
 
-                <div *ngIf='quote.showDescription'>
-                    <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+                    <div class="card-text" *ngIf='quote.showDescription'>
+                        <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <button class="btn btn-warning" (click)='vote($event)' id="upvote"> Like {{votes}}</button>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-danger" (click)='downvote($event)' id="downvote"> Dislike {{downvotes}}</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-primary" (click)='vote()'> Like <span>{{votes}}</span></button>
-                <button class="btn btn-primary" (click)='downvote()'> Dislike <span>{{downvotes}}</span></button>
             </div>
         </div>
-        <div class="col-md-6" appVote>
+        <div class="col-md-6">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
         </div>
