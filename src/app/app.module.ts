@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { ReactiveFormsModule} from '@angular/forms' 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +14,6 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighlightDirective } from './highlight.directive';
 import { VotesComponent } from './votes/votes.component';
 import { NgVoteComponent } from './ng-vote/ng-vote.component';
-import { MatFormFieldComponent } from './mat-form-field/mat-form-field.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +25,16 @@ import { MatFormFieldComponent } from './mat-form-field/mat-form-field.component
     HighlightDirective,
     VotesComponent,
     NgVoteComponent,
-    MatFormFieldComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

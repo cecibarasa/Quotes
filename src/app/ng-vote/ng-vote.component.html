@@ -1,3 +1,5 @@
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<button class="btn btn-warning" (click)='vote()' id="upvote"> Like {{votes}}</button>
-<button class="btn btn-danger" (click)='downvote()' id="downvote">thumb_down_alt Dislike {{downvotes}}</button>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<button class="fas fa-thumbs-up btn btn-info" (click)='vote()' id="upvote">{{votes}}</button>
+<button class="fas fa-thumbs-down btn btn-info" (click)='downvote()' id="downvote">{{downvotes}}</button>

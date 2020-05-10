@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit, Output, EventEmitter, INJECTOR, InjectionToken } from '@angular/core';
+// import { Quote } from "../quote";
 
-@Component({
-  selector: 'app-mat-form-field',
-  templateUrl: './mat-form-field.component.html',
-  styleUrls: ['./mat-form-field.component.css']
-})
-export class MatFormFieldComponent implements OnInit {
+// @Component({
+//   selector: 'app-mat-form-field',
+//   templateUrl: './mat-form-field.component.html',
+//   styleUrls: ['./mat-form-field.component.css']
+// })
+// export class MatFormFieldComponent implements OnInit {
 
-  constructor() { }
+//   newQuote = new Quote(0,"","",new Date());
+// @Output() addQuote = new EventEmitter<Quote>();
+// @Output() resetForm = new EventEmitter<Quote>();
 
-  ngOnInit(): void {
-  }
+//   submitQuote(){
+//     this.addQuote.emit(this.newQuote);
+//   }
 
-}
+//   constructor() { }
+
+//   ngOnInit(): void {
+//   }
+
+// }
