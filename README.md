@@ -1,3 +1,5 @@
+[![codebeat badge](https://codebeat.co/badges/6af7906c-abbd-4f72-b772-3feeb2f32d8d)](https://codebeat.co/projects/github-com-cecibarasa-quotes-master)
+
 # Quotes
 
 ## By Cecilia Barasa
